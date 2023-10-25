@@ -1,49 +1,45 @@
 
 
-// let datasAxios = await axiosTest();
-// console.log("Datas via Axios : ", datasAxios);
-// async function axiosTest () {
-//     const response = await axios.get("https://pokebuildapi.fr/api/v1/pokemon/pikachu");
-//     return response.data;
-// }
+let datasAxios = await axiosTest();
+console.log("Datas via Axios : ", datasAxios);
+async function axiosTest () {
+    const response = await axios.get("https://pokebuildapi.fr/api/v1/pokemon");
+    return response.data;
+}
+let main = document.createElement('main');
+document.body.appendChild(main);
 
-// let main = document.createElement("main");
-//     document.body.appendChild(main);
+let pokemonList = document.createElement('select'); 
+pokemonList.setAttribute('id', 'pokemonList');            // Créez une liste select pour contenir les éléments pokemons
+main.appendChild(pokemonList);
 
-    // let pokemonList = document.getElementById('pokemonList');
-    //     main.appendChild(pokemonList);
+let image = document.createElement('img');
+ image.setAttribute('id','pokemon-img');
+ main.appendChild(image);
 
-    // for (let index = 0; index < 200; index++) {
+
+//...............afficher la list des pokemons avec une boucle foreach...........
+let option = document.createElement("option");
+option.innerText = "--Choix Pokemon--";//....choisir de rien afficher au depart et cest au client de choisir son pokemon.....
+pokemonList.appendChild(option);
+
+    datasAxios.forEach(pokemon => {
+        console.log("pokemon,", pokemon);
+        option = document.createElement('option');
+        option.innerText = pokemon.name;
+        pokemonList.appendChild(option);
+    });
+
+
+// ..............faire un edventlisstener pour chaque chois il ya un chang et option....
     
-    //     let listItem = document.createElement('li'); 
-    //     listItem.innerHTML = `<img src="${pokemon.imageUrl}" alt="${pokemon.name}" /> ${pokemon.name}`;
-    //     pokemonList.appendChild(listItem);
-              
-  
-    // }
-      
+         pokemonList.addEventListener("change",() => {
+            console.log("pokemonselect:", pokemonList.value);
+         let pokemontrouve = datasAxios.find((element) => element.name == pokemonList.value);
+         console.log("image de pokemon:",pokemontrouve.image);
+          image.setAttribute("src", pokemontrouve.image);
+   });
 
-    document.addEventListener('DOMContentLoaded', () => {
-        let main = document.createElement('main');
-        document.body.appendChild(main);
-        let pokemonList = document.createElement('ul'); 
-        pokemonList.getElementById('pokemonList');            // Créez une liste ul pour contenir les éléments li
-         main.appendChild(pokemonList);
-      
-         // Vous pouvez modifier la limite en fonction du nombre de Pokémon que vous souhaitez afficher
-      
-          // Utilisez l'API PokeAPI pour obtenir leBys données des Pokémon
-          fetch(`https://pokebuildapi.fr/api/v1/pokemon/pikachu`)
-            .then(response => response.json())
-            .then(data => {
-              let listItem = document.createElement('li');
-              listItem.innerHTML = `<img src="${data.sprites.front_default}" alt="${data.name}" /> ${data.name}`;
-              pokemonList.appendChild(listItem);
-            })
-            .catch(error => {
-              console.error('Erreur lors de la récupération des données des Pokémon', error);
-            });
-        
-       
-      });
-      
+
+
+

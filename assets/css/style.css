@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background-image: url(/assets/img/unnamed.jpg);
+    background-size: auto;
+}
+main {
+    width: 60%; 
+    padding: 40PX;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid rgb(243, 198, 198);
+    background-color: rgba(245, 245, 220, 0.402);
+
+}
+#pokemonList {
+  height: 40px;
+  background-color: rgb(248, 227, 70);
+}
+#pokemon-img{
+    border: 1px solid rgb(239, 227, 227);
+    width: 350px;
+    height: 350px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    box-shadow: rgb(77, 38, 77) 0px 20px 30px 10px;
+}
