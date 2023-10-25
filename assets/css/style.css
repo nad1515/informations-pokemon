@@ -10,19 +10,26 @@ main {
     padding: 40PX;
     display: flex;
     justify-content: space-around;
-    border: 1px solid rgb(243, 198, 198);
-    background-color: rgba(245, 245, 220, 0.402);
+    border: 1px solid rgb(239, 243, 198);
+    background-color: rgba(215, 142, 223, 0.484);
+    margin: auto;
+    border-radius:5% ;
 
 }
 #pokemonList {
   height: 40px;
-  background-color: rgb(248, 227, 70);
+  background-color: rgb(242, 225, 91);
 }
 #pokemon-img{
-    border: 1px solid rgb(239, 227, 227);
+    border: 1px solid #f8dada;
     width: 350px;
     height: 350px;
-    background-color: aliceblue;
+    background-color: rgb(216, 225, 233);
     border-radius: 50%;
     box-shadow: rgb(77, 38, 77) 0px 20px 30px 10px;
+}
+h1 {
+font-family:Verdana, Geneva, Tahoma, sans-serif ;
+ 
+ 
 }

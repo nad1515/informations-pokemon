@@ -32,14 +32,21 @@ pokemonList.appendChild(option);
 
 
 // ..............faire un edventlisstener pour chaque chois il ya un chang et option....
+         if (option.innerText = "--Choix Pokemon--") {
+            image.setAttribute("src", '');
+             
+         }else{
+
+            pokemonList.addEventListener("change",() => {
+                console.log("pokemonselect:", pokemonList.value);
+             let pokemontrouve = datasAxios.find((element) => element.name == pokemonList.value);
+             console.log("image de pokemon:",pokemontrouve.image);
+              image.setAttribute("src", pokemontrouve.image);
+       });
     
-         pokemonList.addEventListener("change",() => {
-            console.log("pokemonselect:", pokemonList.value);
-         let pokemontrouve = datasAxios.find((element) => element.name == pokemonList.value);
-         console.log("image de pokemon:",pokemontrouve.image);
-          image.setAttribute("src", pokemontrouve.image);
-   });
-
-
+    
+    
+         }
+      
 
 
