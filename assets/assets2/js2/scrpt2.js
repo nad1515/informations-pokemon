@@ -25,19 +25,21 @@ let radio = document.createElement("input");
    radio.type = "radio";
    radio.id = "radioButton";
    radio.name = "pokemonList";
-   radio.value = "Par Nom" // valeur du button radio
+   radio.value = "Par Nom"; // valeur du button radio
 let label = document.createElement("label");
+label.for = "radiobutton";// il faut avoir les memes name des deux input 
     label.innerText = "par Nom";
 
 
 let radio2 = document.createElement("input");
     radio2.type = "radio";
     radio2.id = "radioButton2";
-    radio2.name = "elements";
+    radio2.name = "pokemonList";
     radio.value = "Par Element" // valeur du button radio
 let label2 = document.createElement("label");
 label2.setAttribute("id","radiobutton2");
-    label2.innerText = "par element";
+  label2.for = "radioButton2";
+  label2.innerText = "par element";
 
 let form = document.createElement("div");
  form.setAttribute("id","form");
@@ -49,6 +51,8 @@ form.appendChild(label);
 
 form.appendChild(radio2);
 form.appendChild(label2);
+
+// let radio = document.querySelector("input"[tupe = "radio"]:chcked);
 
 
 let pokemonList = document.createElement('select'); 
