@@ -16,6 +16,7 @@ main {
     border-radius:5% ;
 
 }
+
 #pokemonList {
   height: 40px;
   background-color: rgb(242, 225, 91);
@@ -29,7 +30,12 @@ main {
     box-shadow: rgb(77, 38, 77) 0px 20px 30px 10px;
 }
 h1 {
-font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: xx-large;
  
  
+}
+.une-statistique {
+    padding: 50px;
+    border: 1px solid 
 }
