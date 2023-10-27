@@ -34,7 +34,7 @@ label.for = "radiobutton";// il faut avoir les memes name des deux input
 let radio2 = document.createElement("input");
     radio2.type = "radio";
     radio2.id = "radioButton2";
-    radio2.name = "pokemonList";
+    radio2.name = "pokemonList";//.....il faut donner le meme radio.name pour alterner le checked des bouttons
     radio.value = "Par Element" // valeur du button radio
 let label2 = document.createElement("label");
 label2.setAttribute("id","radiobutton2");
@@ -46,16 +46,30 @@ let form = document.createElement("div");
  fieldset.appendChild(form);
 
 
-form.appendChild(radio);
-form.appendChild(label);
+    form.appendChild(radio);
+    form.appendChild(label);
 
-form.appendChild(radio2);
-form.appendChild(label2);
+    form.appendChild(radio2);
+    form.appendChild(label2);
 
-// let radio = document.querySelector("input"[tupe = "radio"]:chcked);
-
-
+// Créez une liste select pour contenir les éléments pokemons
 let pokemonList = document.createElement('select'); 
-    pokemonList.setAttribute('id', 'pokemonList');            // Créez une liste select pour contenir les éléments pokemons
+    pokemonList.setAttribute('id', 'pokemonList');            
     fieldset.appendChild(pokemonList);
+
+let option = document.createElement("option");
+  option.innerText = "--Choix Pokemon--";//....choisir de rien afficher au depart et cest au client de choisir son pokemon.....
+  pokemonList.appendChild(option);
+
+//         radio = document.querySelector('input[type ="radio"]:chcked');
+//    if ( radio) {
+    datasAxios.forEach(pokemon => {
+        console.log("pokemon,", pokemon);
+        option = document.createElement('option');
+        option.innerText = pokemon.name;
+        pokemonList.appendChild(option);
+    });
+
+
+    
    

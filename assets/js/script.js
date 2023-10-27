@@ -6,6 +6,8 @@ async function axiosTest () {
     const response = await axios.get("https://pokebuildapi.fr/api/v1/pokemon");
     return response.data;
 }
+
+
 let main = document.createElement('main');
 document.body.appendChild(main);
 
@@ -54,7 +56,8 @@ pokemonList.appendChild(option);
         });
       }
       //........cherches les elements(proprietés) de chaque pokemon........
-      for (const [propriete, valeur] of Object.entries(pokemonList.stats)) {  //METHODE: object.entries()
+      
+      for (const [propriete, valeur] of Object.entries(pokemonTrouve.stats)) {  //METHODE: object.entries()
         console.log(`${propriete}: ${valeur}`);
         let uneStat = document.createElement("div");
         uneStat.classList.add("une-statistique");
