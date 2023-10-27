@@ -6,7 +6,7 @@ body{
     background-size: auto;
 }
 main {
-    width: 60%; 
+    width: 80%; 
     padding: 40PX;
     display: flex;
     justify-content: space-around;
@@ -36,6 +36,10 @@ h1 {
  
 }
 .une-statistique {
-    padding: 50px;
-    border: 1px solid 
+    border: 1px solid #f8dada;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(216, 225, 233);
+    box-shadow: rgb(77, 38, 77) 0px 20px 30px 10px;
+    
 }
