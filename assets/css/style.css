@@ -7,7 +7,7 @@ body{
 }
 main {
     width: 80%; 
-    padding: 40PX;
+    padding: 60PX;
     display: flex;
     justify-content: space-around;
     border: 1px solid rgb(239, 243, 198);
@@ -42,4 +42,10 @@ h1 {
     background-color: rgb(216, 225, 233);
     box-shadow: rgb(77, 38, 77) 0px 20px 30px 10px;
     
+}
+.container{
+    width: 40%;
+    padding: 20px;
+    border: 2px solid brown;
+    background-color: rgb(216, 225, 233);
 }
