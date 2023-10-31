@@ -4,22 +4,27 @@
 body{
     background-image: url(/assets/img/unnamed.jpg);
     background-size: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+ 
 }
 main {
-    width: 80%; 
+    width: 60%; 
     padding: 60PX;
-    display: flex;
     justify-content: space-around;
     border: 1px solid rgb(239, 243, 198);
     background-color: rgba(215, 142, 223, 0.484);
     margin: auto;
     border-radius:5% ;
+    display: flex;
 
 }
 
 #pokemonList {
   height: 40px;
-  background-color: rgb(242, 225, 91);
+  background-color: rgba(241, 221, 63, 0.814);
 }
 #pokemon-img{
     border: 1px solid #f8dada;
@@ -32,7 +37,7 @@ main {
 h1 {
     font-family: 'Pokemon Solid', sans-serif;
     font-size: xx-large;
- 
+   
  
 }
 .une-statistique {
@@ -43,9 +48,11 @@ h1 {
     box-shadow: rgb(77, 38, 77) 0px 20px 30px 10px;
     
 }
-.container{
-    width: 40%;
+.contenair{
+    width: 60%;
     padding: 20px;
-    border: 2px solid brown;
-    background-color: rgb(216, 225, 233);
+    background-color: rgba(216, 225, 233, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
